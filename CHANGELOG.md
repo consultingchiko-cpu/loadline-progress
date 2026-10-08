@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 — 2026-10-08
+
+- Updated development tooling to Mocha 12 and removed known development-dependency audit findings.
+- Added repository, homepage, issue tracker, keywords, and Node engine metadata.
+- Added `verify` and `prepublishOnly` checks.
+- Added `SECURITY.md` with vulnerability-reporting guidance.
+- Clarified independent-project status and pre-1.0 release limitations.
+
 ## 0.2.0 — Prototype
 
 - Added lifecycle events: `start`, `progress`, `done`, `fail`, and `remove`.

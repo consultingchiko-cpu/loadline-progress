@@ -1,9 +1,28 @@
 {
   "name": "loadline-progress",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A tiny, dependency-free progress bar with modern ESM and TypeScript packaging",
   "license": "MIT",
   "author": "Loadline contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/consultingchiko-cpu/loadline-progress.git"
+  },
+  "homepage": "https://github.com/consultingchiko-cpu/loadline-progress#readme",
+  "bugs": {
+    "url": "https://github.com/consultingchiko-cpu/loadline-progress/issues"
+  },
+  "keywords": [
+    "progress-bar",
+    "loading-bar",
+    "frontend",
+    "typescript",
+    "esm",
+    "accessibility"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
   "main": "./src/loadline.cjs",
   "module": "./src/index.mjs",
   "types": "./types/index.d.ts",
@@ -26,18 +45,21 @@
     "License.md",
     "NOTICE.md",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "SECURITY.md"
   ],
   "scripts": {
     "test": "mocha test/*.test.js",
     "typecheck": "tsc --noEmit",
-    "bench": "node bench/basic.js"
+    "bench": "node bench/basic.js",
+    "verify": "npm test && npm run typecheck && npm audit --omit=dev",
+    "prepublishOnly": "npm run verify"
   },
   "devDependencies": {
-    "chai": "^5.1.2",
+    "chai": "^5.1.0",
     "jquery": "^3.7.1",
     "jsdom": "^24.1.3",
-    "mocha": "^10.7.3",
+    "mocha": "^12.0.3",
     "typescript": "^5.9.3"
   }
 }
