@@ -8,7 +8,7 @@
 })(typeof globalThis !== 'undefined' ? globalThis : this, function() {
   'use strict';
   var Loadline = {};
-  Loadline.version = '0.2.0';
+  Loadline.version = '0.2.1';
   var Settings = Loadline.settings = {
     minimum: 0.08, easing: 'linear', positionUsing: '', speed: 200,
     trickle: true, trickleSpeed: 200, showSpinner: true,
