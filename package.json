@@ -1,0 +1,43 @@
+{
+  "name": "loadline-progress",
+  "version": "0.2.0",
+  "description": "A tiny, dependency-free progress bar with modern ESM and TypeScript packaging",
+  "license": "MIT",
+  "author": "Loadline contributors",
+  "main": "./src/loadline.cjs",
+  "module": "./src/index.mjs",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.mjs",
+      "require": "./src/loadline.cjs",
+      "default": "./src/index.mjs"
+    },
+    "./style.css": "./src/loadline.css",
+    "./integrations/react": "./integrations/react.mjs",
+    "./integrations/vue": "./integrations/vue.mjs",
+    "./integrations/svelte": "./integrations/svelte.mjs"
+  },
+  "files": [
+    "src",
+    "types",
+    "integrations",
+    "License.md",
+    "NOTICE.md",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "mocha test/*.test.js",
+    "typecheck": "tsc --noEmit",
+    "bench": "node bench/basic.js"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "jquery": "^3.7.1",
+    "jsdom": "^24.1.3",
+    "mocha": "^10.7.3",
+    "typescript": "^5.9.3"
+  }
+}

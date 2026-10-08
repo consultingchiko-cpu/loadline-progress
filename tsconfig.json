@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "skipLibCheck": true,
+    "allowJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "loadline-progress": [
+        "types/index.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "types/index.d.ts",
+    "test/typecheck.ts"
+  ]
+}
