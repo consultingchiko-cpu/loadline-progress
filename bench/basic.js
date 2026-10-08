@@ -1,0 +1,10 @@
+const { JSDOM } = require('jsdom');
+const dom = new JSDOM('<!doctype html><html><body></body></html>');
+global.window = dom.window; global.document = dom.window.document;
+const Loadline = require('../src/loadline.cjs');
+Loadline.configure({ speed: 0, trickle: false });
+const start = process.hrtime.bigint();
+for (let i = 0; i < 1000; i++) Loadline.set((i % 99) / 100);
+Loadline.remove();
+const elapsedMs = Number(process.hrtime.bigint() - start) / 1e6;
+console.log(JSON.stringify({ operations: 1000, elapsedMs: Number(elapsedMs.toFixed(3)), node: process.version }));
